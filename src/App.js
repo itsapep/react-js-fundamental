@@ -2,23 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // create variable
+  const enigma = `Enigmacamp`;
+  // assign variable with html tag
+  const name = <h1>Hello {enigma}</h1>
+  // create a function
+  function sayHello(name) {
+    return `hello ${name}`
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // to wrap object and send ito index.html use <div> or blank tag <>
+    <>
+      {/* calling js variable */}
+      {name}
+      {/* calling function within html tag */}
+      <h1>{sayHello(enigma)}</h1>
+    </>
   );
 }
 
