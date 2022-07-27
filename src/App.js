@@ -7,17 +7,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Content from './component/content';
 import Footer from './component/footer';
 import Parent from './component/parent';
+import Counter from './component/counter';
 
 function App() {
   return (
     // to wrap object and send ito index.html use <div> or blank tag <>
     <>
+      <Counter/>
       {/* parent function App passes value to child component BodyComponentFunc */}
-      <BodyComponentFunc firstName="Apep"/>
+      {/* <BodyComponentFunc firstName="Apep"/> */}
       {/* parent function App passes value to child component BodyComponent */}
-      <BodyComponent secondName="Yurham"/>
+      {/* <BodyComponent secondName="Yurham"/> */}
       {/* parent function App passes value to child component Parent */}
-      <Parent name="Mpus" age={20}/>
+      {/* <Parent name="Mpus" age={20}/> */}
 
       {/* <Navbar/>
       <div style={{minHeight : "100vh"}}>
