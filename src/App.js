@@ -6,6 +6,7 @@ import Navbar from './component/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Content from './component/content';
 import Footer from './component/footer';
+import Parent from './component/parent';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <BodyComponentFunc firstName="Apep"/>
       {/* parent function App passes value to child component BodyComponent */}
       <BodyComponent secondName="Yurham"/>
+      {/* parent function App passes value to child component Parent */}
+      <Parent name="Mpus" age={20}/>
+
       {/* <Navbar/>
       <div style={{minHeight : "100vh"}}>
         <Content/>
