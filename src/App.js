@@ -13,7 +13,12 @@ function App() {
   return (
     // to wrap object and send ito index.html use <div> or blank tag <>
     <>
-      <Counter/>
+      {/* state parent-child */}
+      <Parent name="rawr" age={200}/>
+
+      {/* state counter */}
+      {/* <Counter/> */}
+
       {/* parent function App passes value to child component BodyComponentFunc */}
       {/* <BodyComponentFunc firstName="Apep"/> */}
       {/* parent function App passes value to child component BodyComponent */}
