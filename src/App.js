@@ -11,13 +11,15 @@ function App() {
   return (
     // to wrap object and send ito index.html use <div> or blank tag <>
     <>
-      {/* <BodyComponentFunc/>
-      <BodyComponent/> */}
-      <Navbar/>
+      {/* parent function App passes value to child component BodyComponentFunc */}
+      <BodyComponentFunc firstName="Apep"/>
+      {/* parent function App passes value to child component BodyComponent */}
+      <BodyComponent secondName="Yurham"/>
+      {/* <Navbar/>
       <div style={{minHeight : "100vh"}}>
         <Content/>
       </div>
-      <Footer/>
+      <Footer/> */}
     </>
   );
 }
