@@ -9,33 +9,51 @@ import Footer from './component/footer';
 import Parent from './component/parent';
 import Counter from './component/counter';
 import Clock from './component/clock';
+import { Component } from 'react';
 
-function App() {
-  return (
-    // to wrap object and send ito index.html use <div> or blank tag <>
-    <>
-      {/* clock */}
-      <Clock/>
-      {/* state parent-child */}
-      {/* <Parent name="rawr" age={200}/> */}
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      page : ''
+    }
+  }
 
-      {/* state counter */}
-      {/* <Counter/> */}
+  navigation = () => {
+    this.setState({
+      page : '1'
+    })
+  }
 
-      {/* parent function App passes value to child component BodyComponentFunc */}
-      {/* <BodyComponentFunc firstName="Apep"/> */}
-      {/* parent function App passes value to child component BodyComponent */}
-      {/* <BodyComponent secondName="Yurham"/> */}
-      {/* parent function App passes value to child component Parent */}
-      {/* <Parent name="Mpus" age={20}/> */}
+  render() {
+    return (
+      // to wrap object and send ito index.html use <div> or blank tag <>
+      <>
+        {this.state.page === "" ? <Counter onNavigate={this.navigation} default={2}/> : <h1>Pindah</h1>}
 
-      {/* <Navbar/>
-      <div style={{minHeight : "100vh"}}>
-        <Content/>
-      </div>
-      <Footer/> */}
-    </>
-  );
+        {/* clock */}
+        {/* <Clock/> */}
+        {/* state parent-child */}
+        {/* <Parent name="rawr" age={200}/> */}
+
+        {/* state counter */}
+        {/* <Counter/> */}
+
+        {/* parent function App passes value to child component BodyComponentFunc */}
+        {/* <BodyComponentFunc firstName="Apep"/> */}
+        {/* parent function App passes value to child component BodyComponent */}
+        {/* <BodyComponent secondName="Yurham"/> */}
+        {/* parent function App passes value to child component Parent */}
+        {/* <Parent name="Mpus" age={20}/> */}
+
+        {/* <Navbar/>
+        <div style={{minHeight : "100vh"}}>
+          <Content/>
+        </div>
+        <Footer/> */}
+      </>
+    );
+  }
 }
 
 export default App;
