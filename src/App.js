@@ -11,6 +11,7 @@ import Counter from './component/counter';
 import Clock from './component/clock';
 import { Component } from 'react';
 import List from './component/list';
+import FormList from './component/form_list';
 
 class App extends Component {
   constructor(props) {
@@ -30,10 +31,13 @@ class App extends Component {
     return (
       // to wrap object and send ito index.html use <div> or blank tag <>
       <>
-        {/* List */}
-        <List/>
+        {/* List item */}
+        <FormList/>
 
-        {this.state.page === "" ? <Counter onNavigate={this.navigation} default={2}/> : <h1>Pindah</h1>}
+        {/* List */}
+        {/* <List/> */}
+
+        {/* {this.state.page === "" ? <Counter onNavigate={this.navigation} default={2}/> : <h1>Pindah</h1>} */}
 
         {/* clock */}
         {/* <Clock/> */}
