@@ -4,7 +4,11 @@ class List extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            products : [`Soap`,`Shampoo`,`Tooth Brush`]
+            products : [
+                {id:1,brand:`Soap`},
+                {id:2,brand:`Shampoo`},
+                {id:3,brand:`Tooth Brush`}
+            ]
         }
     }
 
@@ -12,7 +16,7 @@ class List extends Component {
         return (
             <div>
                 <ul>
-                    {this.state.products.map(p => <li>{p}</li>)}
+                    {this.state.products.map(p => <li key={p.id}>key = {p.id}, brand = {p.brand}</li>)}
                 </ul>
             </div>
         )
