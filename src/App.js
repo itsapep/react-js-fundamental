@@ -8,13 +8,16 @@ import Content from './component/content';
 import Footer from './component/footer';
 import Parent from './component/parent';
 import Counter from './component/counter';
+import Clock from './component/clock';
 
 function App() {
   return (
     // to wrap object and send ito index.html use <div> or blank tag <>
     <>
+      {/* clock */}
+      <Clock/>
       {/* state parent-child */}
-      <Parent name="rawr" age={200}/>
+      {/* <Parent name="rawr" age={200}/> */}
 
       {/* state counter */}
       {/* <Counter/> */}
